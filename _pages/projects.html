@@ -1,0 +1,22 @@
+---
+layout: archive
+title: "Projects"
+permalink: /projects/
+author_profile: true
+redirect_from:
+  - /portfolio/
+---
+
+<p class="page-intro">Selected research and engineering work, from image restoration to applied vision and interactive 3D systems.</p>
+<div class="project-list">
+{% assign projects = site.portfolio | sort: 'order' %}
+{% for project in projects %}
+  <article class="project-list__item">
+    <p class="eyebrow">{{ project.area }}{% if project.period %} · {{ project.period }}{% endif %}</p>
+    <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+    <p>{{ project.summary }}</p>
+    <p class="project-tools">{{ project.tools }}</p>
+    <a class="text-link" href="{{ project.url | relative_url }}">Project details →</a>
+  </article>
+{% endfor %}
+</div>
