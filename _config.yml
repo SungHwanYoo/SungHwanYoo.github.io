@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title: "Sunghwan Yoo"
 title_separator          : "-"
 name: &name "Sunghwan Yoo"
-description: &description "M.S. student in Artificial Intelligence at Gachon University. Research in image fusion, restoration, and 3D vision."
+description: &description "M.S. student in the School of Computing at Gachon University. Research in image fusion, restoration, and 3D vision."
 url: "https://sunghwanyoo.github.io"
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -140,6 +140,7 @@ exclude:
   - tmp
   - tests
   - CONTENT_SOURCES.md
+  - BLOGGING.md
   - CONTRIBUTING.md
   - README.md
   - markdown_generator
@@ -201,6 +202,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      permalink: /blog/:year/:month/:day/:title/
       read_time: true
       comments: false
       share: false
@@ -293,10 +295,10 @@ whitelist:
 #  - <base_path/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
-  path: /categories/
+  path: /blog/
 tag_archive:
-  type: liquid
-  path: /tags/
+  type:
+  path:
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:

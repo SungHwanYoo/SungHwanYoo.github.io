@@ -1,14 +1,14 @@
 ---
-title: "Private 5G for military communications"
+title: "Private 5G military communication network performance M&S"
 collection: "portfolio"
 permalink: "/projects/private-5g/"
-area: "Technology research"
-order: 5
+area: "LIG collaboration"
+order: 2
 featured: false
 mark: "05"
-summary: "Use-case research, tactical scenario planning, and technical reporting for private 5G networks."
+summary: "LIG collaboration on Private 5G military communication network performance. I research defense applications, plan tactical scenarios, and prepare technical reports using M&S results from a collaborating lab."
 tools: "Private 5G · Scenario planning · Technical writing"
-excerpt: "Use-case research, tactical scenario planning, and technical reporting for private 5G networks."
+excerpt: "LIG collaboration involving defense technology research, tactical scenario planning, and technical reporting for Private 5G military communications."
 share: false
 comments: false
 period: "March 2025–present"
@@ -16,10 +16,12 @@ period: "March 2025–present"
 
 <p class="entry-period">March 2025–present</p>
 
-Research support for a project on modeling and simulation of private 5G military communication network performance.
+Research support for a **LIG collaboration** on modeling and simulation (M&S) of Private 5G military communication network performance, at Gachon University.
 
 ### My contribution
 
-Investigated domestic and international private 5G applications and technology trends, helped plan tactical scenarios, and prepared technical reports and presentation materials using simulation results provided by a collaborating lab.
+- Investigated domestic and international Private 5G defense applications and trends in next-generation military communication technologies.
+- Planned tactical scenarios for military communication network performance studies.
+- Prepared technical reports and presentation materials based on modeling and simulation results supplied by a collaborating lab.
 
 [← All projects]({{ "/projects/" | relative_url }})

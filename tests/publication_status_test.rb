@@ -27,11 +27,24 @@ class PublicationStatusTest < Minitest::Test
       ---
       layout: single
       title: Published paper fixture
+      english_title: English paper title fixture
       status: published
       venue: Example Conference
       date: 2025-07-02
       ---
       Conference paper.
+    DOCUMENT
+    File.write(File.join(@temporary, '_publications/in-review.md'), <<~DOCUMENT)
+      ---
+      layout: single
+      title: Review manuscript fixture
+      status: submitted
+      review_status: under-review
+      venue: Actual Journal Full Name
+      venue_display: IEEE Trans.
+      date: 2026-09-01
+      ---
+      Review in progress.
     DOCUMENT
     File.write(File.join(@temporary, 'index.html'), <<~DOCUMENT)
       ---
@@ -74,5 +87,25 @@ class PublicationStatusTest < Minitest::Test
     assert_includes html, 'Submitted to'
     assert_includes html, 'Published in <i>Example Conference</i>, 2025'
     refute_includes html, 'Published in <i>Example Journal</i>'
+  end
+
+  def test_review_status_uses_short_venue_without_claiming_publication
+    html = File.read(File.join(@temporary, '_site/publications/in-review.html'))
+    assert_includes html, 'Under review'
+    assert_includes html, '<i>IEEE Trans.</i>'
+    refute_includes html, 'Published in'
+    refute_includes html, 'itemprop="datePublished"'
+    refute_includes html, 'property="article:published_time"'
+  end
+
+  def test_english_title_sits_below_the_paper_title
+    archive = File.read(File.join(@temporary, '_site/index.html'))
+    detail = File.read(File.join(@temporary, '_site/publications/published.html'))
+    [archive, detail].each do |html|
+      assert_includes html, 'class="publication__translation"'
+      assert_includes html, 'English paper title fixture'
+      assert_operator html.index('English paper title fixture'), :<, html.index('Published in <i>Example Conference</i>')
+      refute_includes html, 'Descriptive English translation'
+    end
   end
 end

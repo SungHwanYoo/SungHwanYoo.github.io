@@ -27,6 +27,7 @@ layout: default
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header>
           {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+          {% if page.english_title %}<p class="publication__translation" lang="en">{{ page.english_title | escape }}</p>{% endif %}
           {% if page.read_time %}
             <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
@@ -35,7 +36,7 @@ layout: default
         {% endif %}
         
         {% if page.status == 'submitted' %}
-          <p class="publication__venue"><span class="status-label">Under submission</span> Submitted to <i>{{ page.venue }}</i></p>
+          <p class="publication__venue"><span class="status-label">{% if page.review_status == 'under-review' %}Under review{% else %}Under submission{% endif %}</span>{% unless page.review_status == 'under-review' %} Submitted to{% endunless %} <i>{{ page.venue_display | default: page.venue | escape }}</i></p>
         {% elsif page.collection == 'teaching' %}
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.venue and page.date %}
@@ -48,6 +49,8 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {{ content }}
+
+        {% if page.reference_url %}<p><a href="{{ page.reference_url | escape }}">View on DBpia →</a></p>{% endif %}
 
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>

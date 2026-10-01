@@ -8,11 +8,9 @@ permalink: "/publications/2026-spatial-attention/"
 share: false
 comments: false
 date: "2026-06-23"
-excerpt: "부석경, 유성환, 정용주. Multimodal image fusion using heat-conduction-based adaptive spatial attention (descriptive English translation)."
+english_title: "Multi-modality Image Fusion utilizing Heat Conduction-based Adaptive Spatial Attention"
+reference_url: "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12929657"
+excerpt: "부석경, 유성환, 정용주"
 ---
 
 **Authors:** 부석경, 유성환, 정용주
-
-**Descriptive English translation:** Multimodal image fusion using heat-conduction-based adaptive spatial attention.
-
-Presented at Korea Computer Congress (KCC), 2026. The original Korean title and author order are recorded in the [CVIP Lab publication list](https://sites.google.com/site/gachoncvip/publication/domestic).

@@ -3,8 +3,9 @@ title: "Hybrid 3D indoor map"
 collection: "portfolio"
 permalink: "/projects/3d-indoor-map/"
 area: "3D vision & web"
-order: 2
-featured: true
+order: 4
+featured: false
+published: false
 mark: "02"
 summary: "A Gachon University indoor map combining a mesh with Gaussian splatting and a web interface."
 tools: "3D Gaussian Splatting · Three.js · WebGL"

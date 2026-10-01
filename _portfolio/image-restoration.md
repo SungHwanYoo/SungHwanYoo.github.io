@@ -3,8 +3,9 @@ title: "Image restoration with U-Net"
 collection: "portfolio"
 permalink: "/projects/image-restoration/"
 area: "Image restoration"
-order: 1
-featured: true
+order: 6
+featured: false
+published: false
 mark: "01"
 summary: "A reproducible deblurring pipeline with synthetic blur, model training, and evaluation."
 tools: "Python · PyTorch · U-Net"

@@ -1,0 +1,30 @@
+---
+layout: archive
+title: "Blog"
+permalink: /blog/
+author_profile: true
+---
+
+<p class="page-intro">Paper reviews and notes from my studies in computer vision.</p>
+
+<section class="blog-section" id="paper-reviews" aria-labelledby="paper-reviews-heading">
+  <h2 id="paper-reviews-heading">Paper reviews</h2>
+  <p class="blog-description">Reading notes on research papers: key ideas, methods, and questions.</p>
+  {% assign reviews = site.posts | where_exp: 'post', "post.categories contains 'paper-review'" %}
+  {% for post in reviews %}
+    {% include blog-entry.html %}
+  {% else %}
+    <p class="blog-empty">No paper reviews yet.</p>
+  {% endfor %}
+</section>
+
+<section class="blog-section" id="study-notes" aria-labelledby="study-notes-heading">
+  <h2 id="study-notes-heading">Study notes</h2>
+  <p class="blog-description">Concepts, experiments, and lessons from studying and building.</p>
+  {% assign notes = site.posts | where_exp: 'post', "post.categories contains 'study-note'" %}
+  {% for post in notes %}
+    {% include blog-entry.html %}
+  {% else %}
+    <p class="blog-empty">No study notes yet.</p>
+  {% endfor %}
+</section>

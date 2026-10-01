@@ -1,14 +1,3 @@
-{% include base_path %}
-
-{% include base_path %}
-
-{% case site.category_archive.type %}
-  {% when "liquid" %}
-    {% assign path_type = "#" %}
-  {% when "jekyll-archives" %}
-    {% assign path_type = nil %}
-{% endcase %}
-
 {% if site.category_archive.path %}
   {% comment %}
     <!-- Sort alphabetically regardless of case e.g. a B c d E -->
@@ -23,7 +12,14 @@
     {% for hash in category_hashes %}
       {% assign keyValue = hash | split: '#' %}
       {% capture category_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}
-      <a href="{{ base_path }}{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path }}" class="page__taxonomy-item" rel="tag">{{ category_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+      {% case category_word %}
+        {% when 'paper-review' %}
+          <a href="{{ '/blog/#paper-reviews' | relative_url }}" class="page__taxonomy-item" rel="tag">Paper reviews</a>
+        {% when 'study-note' %}
+          <a href="{{ '/blog/#study-notes' | relative_url }}" class="page__taxonomy-item" rel="tag">Study notes</a>
+        {% else %}
+          <span class="page__taxonomy-item">{{ category_word | escape }}</span>
+      {% endcase %}{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
     {% endfor %}
     </span>
   </p>

@@ -1,0 +1,14 @@
+<dialog id="cv-preview" class="cv-preview" aria-labelledby="cv-preview-title">
+  <div class="cv-preview__shell">
+    <header class="cv-preview__header">
+      <h2 id="cv-preview-title">Curriculum vitae</h2>
+      <div class="cv-preview__actions">
+        <a class="cv-download" href="{{ site.data.cv.pdf | relative_url }}" download="{{ site.data.cv.filename }}">Download PDF</a>
+        <button class="cv-preview__close" type="button" data-cv-close aria-label="Close CV preview" autofocus><span aria-hidden="true">&times;</span></button>
+      </div>
+    </header>
+    <div class="cv-preview__body">
+      {% include cv-document.html %}
+    </div>
+  </div>
+</dialog>

@@ -1,0 +1,5 @@
+<article class="blog-entry">
+  <p class="blog-entry__date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }}</time></p>
+  <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+  {% if post.excerpt %}<div class="blog-entry__excerpt">{{ post.excerpt | markdownify }}</div>{% endif %}
+</article>
