@@ -36,7 +36,7 @@ layout: default
         {% endif %}
         
         {% if page.status == 'in-preparation' %}
-          <p class="publication__venue"><span class="status-label">In preparation</span></p>
+          <p class="publication__venue"><span class="status-label">In preparation</span>{% if page.venue %} · <i>{{ page.venue_display | default: page.venue | escape }}</i>{% endif %}</p>
         {% elsif page.status == 'submitted' %}
           <p class="publication__venue"><span class="status-label">{% if page.review_status == 'under-review' %}Under review{% else %}Under submission{% endif %}</span>{% unless page.review_status == 'under-review' %} Submitted to{% endunless %} <i>{{ page.venue_display | default: page.venue | escape }}</i></p>
         {% elsif page.collection == 'teaching' %}

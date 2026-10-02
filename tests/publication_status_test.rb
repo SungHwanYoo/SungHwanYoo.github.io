@@ -112,8 +112,10 @@ class PublicationStatusTest < Minitest::Test
     archive = File.read(File.join(@temporary, '_site/index.html'))
     detail = File.read(File.join(@temporary, '_site/publications/in-preparation.html'))
     assert_includes archive, '<span class="status-label">In preparation</span>'
+    assert_includes archive, '<i>Future Journal</i>'
     refute_includes archive, 'Published in <i>Future Journal</i>'
     assert_includes detail, '<span class="status-label">In preparation</span>'
+    assert_includes detail, '<i>Future Journal</i>'
     refute_includes detail, 'Published in'
     refute_includes detail, 'Submitted to'
     refute_includes detail, 'Under review'

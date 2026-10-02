@@ -3,6 +3,7 @@ title: "FAM-LUT: Factorized Additive Mapping via Look-Up Tables for Infrared–V
 collection: "publications"
 category: "in-preparation"
 status: "in-preparation"
+venue: "IEEE Letters"
 permalink: "/publications/fam-lut/"
 share: false
 comments: false

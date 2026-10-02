@@ -45,7 +45,7 @@
     {% endif %}
 
         {% if post.status == 'in-preparation' %}
-          <p class="publication__venue"><span class="status-label">In preparation</span></p>
+          <p class="publication__venue"><span class="status-label">In preparation</span>{% if post.venue %} · <i>{{ post.venue_display | default: post.venue | escape }}</i>{% endif %}</p>
         {% elsif post.status == 'submitted' %}
           <p class="publication__venue"><span class="status-label">{% if post.review_status == 'under-review' %}Under review{% else %}Under submission{% endif %}</span>{% unless post.review_status == 'under-review' %} Submitted to{% endunless %} <i>{{ post.venue_display | default: post.venue | escape }}</i></p>
         {% elsif post.collection == 'teaching' %}
