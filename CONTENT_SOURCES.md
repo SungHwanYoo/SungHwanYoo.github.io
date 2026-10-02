@@ -10,6 +10,7 @@ Reviewed October 1, 2026.
 - U-Net implementation and framework: https://github.com/SungHwanYoo/UNet_Deblurring
 - The owner supplied the portrait and confirmed the public email dksl1233@gachon.ac.kr. The owner corrected the current master's affiliation to the School of Computing, Gachon University, on October 1, 2026.
 - The owner supplied a biography confirming a B.S. degree from the School of Computing, Gachon University, Seongnam, Korea, in 2026. The homepage presents this in first person, with separate paragraphs for the bachelor's degree, current master's study and CVIP Lab affiliation, and research interests.
+- The owner confirmed an undergraduate GPA of 4.47/4.50 and a major GPA of 4.50/4.50. These appear below the bachelor's degree on the homepage.
 
 Korean paper titles are the original titles. On October 1, 2026, the owner supplied the exact English titles for all three conference papers; their capitalization and hyphens are preserved verbatim in gray subtitles without a translation label. Journal manuscripts retain submitted status in metadata and display as under review. The owner reported that the deblurring manuscript had been withdrawn from its previous journal and resubmitted to MDPI, and requested broad venue labels instead of exact journal names: `IEEE Trans.` for HeatFuse and `MDPI` for deblurring. The conference title links lead to the supplied DBpia article records, not directly to PDFs.
 

@@ -14,6 +14,8 @@ redirect_from:
 
 I received my **B.S. degree** from the School of Computing at Gachon University, Seongnam, South Korea, in 2026.
 
+<p class="education-details">GPA: <strong>4.47 / 4.50</strong> · Major GPA: <strong>4.50 / 4.50</strong></p>
+
 I am currently a master's student in the **School of Computing** at Gachon University and a member of the [Computer Vision and Image Processing Laboratory (CVIP Lab)](https://sites.google.com/site/gachoncvip).
 
 My research interests include **infrared–visible image fusion (IVIF)** and **image restoration**.
