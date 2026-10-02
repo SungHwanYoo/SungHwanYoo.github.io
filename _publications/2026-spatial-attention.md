@@ -2,6 +2,7 @@
 title: "열전도 기반 적응적 공간 어텐션을 활용한 다중 모달리티 이미지 융합"
 collection: "publications"
 category: "conferences"
+order: 2
 status: "published"
 venue: "Korea Computer Congress (KCC)"
 permalink: "/publications/2026-spatial-attention/"

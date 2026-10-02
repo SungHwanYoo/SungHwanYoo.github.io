@@ -2,6 +2,7 @@
 title: "전역-국부 정보를 활용한 두 단계 영상 블러 제거 기법"
 collection: "publications"
 category: "conferences"
+order: 3
 status: "published"
 venue: "Korea Computer Congress (KCC)"
 permalink: "/publications/2025-two-stage-deblurring/"

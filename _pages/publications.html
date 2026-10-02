@@ -8,10 +8,14 @@ author_profile: true
 {% for category in site.publication_category %}
   <section class="publication-section">
     <h2>{{ category[1].title }}</h2>
-    {% for post in site.publications reversed %}
-      {% if post.category == category[0] %}
-        {% include archive-single.html %}
-      {% endif %}
+    {% assign category_publications = site.publications | where: "category", category[0] %}
+    {% if category[0] == 'conferences' %}
+      {% assign category_publications = category_publications | sort: "order" %}
+    {% else %}
+      {% assign category_publications = category_publications | reverse %}
+    {% endif %}
+    {% for post in category_publications %}
+      {% include archive-single.html %}
     {% endfor %}
   </section>
 {% endfor %}
