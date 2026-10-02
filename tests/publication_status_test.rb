@@ -46,6 +46,16 @@ class PublicationStatusTest < Minitest::Test
       ---
       Review in progress.
     DOCUMENT
+    File.write(File.join(@temporary, '_publications/in-preparation.md'), <<~DOCUMENT)
+      ---
+      layout: single
+      title: Preparation manuscript fixture
+      status: in-preparation
+      venue: Future Journal
+      date: 2026-09-01
+      ---
+      Manuscript in preparation.
+    DOCUMENT
     File.write(File.join(@temporary, 'index.html'), <<~DOCUMENT)
       ---
       layout: archive
@@ -96,6 +106,19 @@ class PublicationStatusTest < Minitest::Test
     refute_includes html, 'Published in'
     refute_includes html, 'itemprop="datePublished"'
     refute_includes html, 'property="article:published_time"'
+  end
+
+  def test_preparation_never_claims_submission_or_publication
+    archive = File.read(File.join(@temporary, '_site/index.html'))
+    detail = File.read(File.join(@temporary, '_site/publications/in-preparation.html'))
+    assert_includes archive, '<span class="status-label">In preparation</span>'
+    refute_includes archive, 'Published in <i>Future Journal</i>'
+    assert_includes detail, '<span class="status-label">In preparation</span>'
+    refute_includes detail, 'Published in'
+    refute_includes detail, 'Submitted to'
+    refute_includes detail, 'Under review'
+    refute_includes detail, 'itemprop="datePublished"'
+    refute_includes detail, 'property="article:published_time"'
   end
 
   def test_english_title_sits_below_the_paper_title

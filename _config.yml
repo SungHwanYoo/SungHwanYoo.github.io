@@ -28,11 +28,12 @@ author:
   location: "South Korea"
   employer: "Gachon University"
   email: "dksl1233@gachon.ac.kr"
-  github: "SungHwanYoo"
   linkedin: "sunghwan-yoo-1328492b8"
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
+  in-preparation:
+    title: 'Manuscripts in preparation'
   manuscripts:
     title: 'Manuscripts under submission'
   conferences:

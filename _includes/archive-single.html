@@ -44,7 +44,9 @@
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
-        {% if post.status == 'submitted' %}
+        {% if post.status == 'in-preparation' %}
+          <p class="publication__venue"><span class="status-label">In preparation</span></p>
+        {% elsif post.status == 'submitted' %}
           <p class="publication__venue"><span class="status-label">{% if post.review_status == 'under-review' %}Under review{% else %}Under submission{% endif %}</span>{% unless post.review_status == 'under-review' %} Submitted to{% endunless %} <i>{{ post.venue_display | default: post.venue | escape }}</i></p>
         {% elsif post.collection == 'teaching' %}
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>

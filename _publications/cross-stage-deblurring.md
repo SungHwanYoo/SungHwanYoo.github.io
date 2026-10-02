@@ -8,4 +8,7 @@ venue: "MDPI"
 permalink: "/publications/cross-stage-deblurring/"
 share: false
 comments: false
+excerpt: "유성환, 부석경, 정용주"
 ---
+
+**Authors:** 유성환, 부석경, 정용주

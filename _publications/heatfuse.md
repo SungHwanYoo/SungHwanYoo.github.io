@@ -8,4 +8,7 @@ venue: "IEEE Trans."
 permalink: "/publications/heatfuse/"
 share: false
 comments: false
+excerpt: "유성환, 정용주"
 ---
+
+**Authors:** 유성환, 정용주
