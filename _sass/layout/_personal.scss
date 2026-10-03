@@ -130,6 +130,12 @@ html.cv-preview-open { overflow: hidden; }
 .project-demo { display: block; width: 100%; max-width: 720px; margin: 1.6rem auto; }
 .project-demo video { display: block; width: 100%; height: auto; border: 1px solid var(--global-border-color); border-radius: 10px; background: #f8fafc; }
 .project-demo figcaption { margin-top: .75rem; font-size: .72rem; line-height: 1.6; color: var(--global-text-color-light); text-align: center; }
+.project-demos { display: grid; width: 100%; max-width: 720px; gap: 1rem; margin: 1rem auto 1.25rem; }
+.project-demos--multiple { max-width: 800px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.project-demos .project-demo { margin: 0; max-width: none; min-width: 0; }
+@media (max-width: 600px) {
+  .project-demos--multiple { max-width: 440px; grid-template-columns: 1fr; }
+}
 
 .blog-section { margin-top: 2.5rem; }
 .blog-section > h2 { margin-top: 0; }

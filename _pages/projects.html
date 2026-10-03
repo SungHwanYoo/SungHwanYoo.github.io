@@ -13,6 +13,7 @@ redirect_from:
   <article class="project-list__item">
     <p class="eyebrow">{{ project.area }}{% if project.period %} · {{ project.period }}{% endif %}</p>
     <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+    {% include project-videos.html project=project %}
     <p>{{ project.summary }}</p>
     <p class="project-tools">{{ project.tools }}</p>
     <a class="text-link" href="{{ project.url | relative_url }}">Project details →</a>

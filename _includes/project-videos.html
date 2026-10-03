@@ -1,0 +1,14 @@
+{% assign demo_project = include.project %}
+{% if demo_project.demos and demo_project.demos.size > 0 %}
+<div class="project-demos{% if demo_project.demos.size > 1 %} project-demos--multiple{% endif %}">
+  {% for demo in demo_project.demos %}
+  <figure class="project-demo">
+    <video width="{{ demo.width }}" height="{{ demo.height }}"{% if demo.autoplay %} autoplay{% endif %} muted loop playsinline controls preload="metadata" poster="{{ demo.poster | relative_url }}" aria-label="{{ demo.description | escape }}">
+      <source src="{{ demo.video | relative_url }}" type="video/mp4">
+      <img src="{{ demo.poster | relative_url }}" alt="{{ demo.description | escape }}" width="{{ demo.width }}" height="{{ demo.height }}">
+    </video>
+    <figcaption>{{ demo.title | escape }}</figcaption>
+  </figure>
+  {% endfor %}
+</div>
+{% endif %}
