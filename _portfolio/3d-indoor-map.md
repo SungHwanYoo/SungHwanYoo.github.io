@@ -20,7 +20,7 @@ demos:
     height: 828
     description: "Initial screen, building selection, floor overview, and 3D indoor map."
   - title: "Marker information & routing"
-    video: "/assets/media/graduation-markers-routing.mp4"
+    video: "/assets/media/graduation-markers-routing.mp4?v=20261003-2"
     poster: "/assets/media/graduation-markers-routing-poster.jpg"
     width: 720
     height: 850
