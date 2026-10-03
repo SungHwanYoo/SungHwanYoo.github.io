@@ -33,12 +33,11 @@ My research interests include **infrared–visible image fusion (IVIF)** and **i
   <p>Fusion combines these complementary views into a single image. In the example below, it preserves the person's thermal contrast alongside the surrounding visual detail.</p>
 
   <figure class="ivif-demo">
-    <video width="1280" height="720" autoplay muted loop playsinline controls preload="metadata" poster="{{ '/assets/media/ivif-demo-poster.png' | relative_url }}" aria-label="Animation showing infrared and visible inputs combining into one fused image" aria-describedby="ivif-caption">
+    <video width="1280" height="720" autoplay muted loop playsinline controls preload="metadata" poster="{{ '/assets/media/ivif-demo-poster.png' | relative_url }}" aria-label="Animation showing infrared and visible inputs combining into one fused image">
       <source src="{{ '/assets/media/ivif-demo.webm' | relative_url }}" type="video/webm">
       <source src="{{ '/assets/media/ivif-demo.mp4' | relative_url }}" type="video/mp4">
       <img src="{{ '/assets/media/ivif-demo-poster.png' | relative_url }}" alt="Two inputs, an infrared image showing thermal targets and a visible image showing scene detail, combine into a fused result." width="1280" height="720">
     </video>
-    <figcaption id="ivif-caption">Input images: <a href="https://github.com/LintaoTang/MSRS">MSRS dataset</a>.</figcaption>
   </figure>
 </section>
 
