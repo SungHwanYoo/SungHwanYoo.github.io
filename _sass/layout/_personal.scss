@@ -127,6 +127,9 @@ html.cv-preview-open { overflow: hidden; }
 .project-list__item p { margin-bottom: .7rem; }
 .project-tools, .entry-period, .cv-contact { font-size: .8rem !important; color: var(--global-text-color-light); }
 .entry-period { margin-top: -.25rem !important; }
+.project-demo { display: block; width: 100%; max-width: 720px; margin: 1.6rem auto; }
+.project-demo video { display: block; width: 100%; height: auto; border: 1px solid var(--global-border-color); border-radius: 10px; background: #f8fafc; }
+.project-demo figcaption { margin-top: .75rem; font-size: .72rem; line-height: 1.6; color: var(--global-text-color-light); text-align: center; }
 
 .blog-section { margin-top: 2.5rem; }
 .blog-section > h2 { margin-top: 0; }

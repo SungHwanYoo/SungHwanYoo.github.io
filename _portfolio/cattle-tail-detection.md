@@ -18,6 +18,16 @@ period: "February–March 2025"
 
 A freelance computer vision project through Freemoa (프리모아), using barn CCTV footage to detect cattle-tail locations and distinguish raised and lowered tail states.
 
+### Demo
+
+<figure class="project-demo">
+  <video width="800" height="400" autoplay muted loop playsinline controls preload="metadata" poster="{{ '/assets/media/cattle-tail-demo-poster.jpg' | relative_url }}" aria-label="Cattle-tail detection demo showing bounding boxes and lowered-tail state predictions in barn CCTV footage" aria-describedby="cattle-demo-caption">
+    <source src="{{ '/assets/media/cattle-tail-demo.mp4' | relative_url }}" type="video/mp4">
+    <img src="{{ '/assets/media/cattle-tail-demo-poster.jpg' | relative_url }}" alt="Two cattle tails detected with bounding boxes and Down state labels." width="800" height="400">
+  </video>
+  <figcaption id="cattle-demo-caption">Tail detection and state classification in barn CCTV footage.</figcaption>
+</figure>
+
 ### My contribution
 
 - Reviewed footage, redesigned labeling criteria, and expanded labeled training data.
