@@ -3,7 +3,7 @@ title: "Cross-stage Patch Interaction for Coarse-to-Fine Image Deblurring"
 collection: "publications"
 category: "manuscripts"
 status: "submitted"
-review_status: "under-review"
+review_status: "major-revision"
 venue: "MDPI"
 permalink: "/publications/cross-stage-deblurring/"
 share: false

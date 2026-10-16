@@ -3,7 +3,7 @@ title: "HeatFuse: Heat-Conduction-Based Spectral Decomposition and Cross-Band Mo
 collection: "publications"
 category: "manuscripts"
 status: "submitted"
-review_status: "under-review"
+review_status: "major-revision"
 venue: "IEEE Trans."
 permalink: "/publications/heatfuse/"
 share: false
