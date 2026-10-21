@@ -52,7 +52,7 @@ layout: default
       <section class="page__content" itemprop="text">
         {{ content }}
 
-        {% if page.reference_url %}<p><a href="{{ page.reference_url | escape }}">View on DBpia →</a></p>{% endif %}
+        {% if page.reference_url %}<p><a href="{{ page.reference_url | escape }}">{{ page.reference_label | default: 'View on DBpia' | escape }} →</a></p>{% endif %}
 
         {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
           <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
